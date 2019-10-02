@@ -41,14 +41,6 @@ int main(void)
 		500, 50, 0.0 // bottom right corner
 	};
 
-	//трикутник
-	float vertices1[] =
-	{
-		325, 250, 0.0, // top corner
-		200, 30, 0.0, // bottom left corner
-		450, 30, 0.0 // bottom right corner
-	};
-
 	glViewport(0.0f, 0.0f, SCREEN_WIDTH, SCREEN_HEIGHT); // 1 і 2 -позиція нижнього лівого кутка, конвертування в пікселі
 	glMatrixMode(GL_PROJECTION); // режим матриці проекцій  
 	glLoadIdentity(); // переносимось на початок координат (0,0,0)
@@ -72,13 +64,6 @@ int main(void)
 		// render OpenGL here коло
 		glColor3f(1.0, 0.0, 0.0);
 		drawCircle(SCREEN_WIDTH / 2, 250, 0, 70);
-
-		// Render OpenGL here трикутник
-		glColor3f(0.5, 1, 0.5);
-		glEnableClientState(GL_VERTEX_ARRAY); 
-		glVertexPointer(3, GL_FLOAT, 0, vertices1); 
-		glDrawArrays(GL_TRIANGLES, 0, 3); 
-		glDisableClientState(GL_VERTEX_ARRAY); 
 				
 		// замінює передній і задній буфери - подвійна буферизація
 		//передній буфер містить результуюче зобр, задній - відрисовку
