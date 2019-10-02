@@ -41,6 +41,14 @@ int main(void)
 		500, 50, 0.0 // bottom right corner
 	};
 
+float vertices_tr[] =
+{
+   300,300,0.0,
+   350,300,0.0,
+   350,250,0.0,
+   300,250,0.0
+};
+
 	glViewport(0.0f, 0.0f, SCREEN_WIDTH, SCREEN_HEIGHT); // 1 і 2 -позиція нижнього лівого кутка, конвертування в пікселі
 	glMatrixMode(GL_PROJECTION); // режим матриці проекцій  
 	glLoadIdentity(); // переносимось на початок координат (0,0,0)
